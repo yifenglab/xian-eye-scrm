@@ -41,8 +41,8 @@ export default defineConfig(async ({ command, mode }) => {
     // vite 相关配置
     server: {
       port: { development: 2024, test: 2025 }[mode],
-      host: true,
-      open: true,
+      host: '127.0.0.1',
+      open: false,
       proxy: {
         // https://cn.vitejs.dev/config/#server-proxy
         '/api': {

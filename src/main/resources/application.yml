@@ -6,7 +6,7 @@ ai:
       - glm-4
     configs:
       glm-4:
-        api-key: aac7e6c624284d609a1b9d7dd2b0903b
+        api-key: ${AI_API_KEY:}
         base-url: https://open.bigmodel.cn/api/paas/v4
         model-name: glm-4
   vector: #向量相关配置
@@ -19,13 +19,13 @@ ai:
       - embedding-3
     configs:
       embedding-3:
-        api-key: aac7e6c624284d609a1b9d7dd2b0903b
+        api-key: ${AI_API_KEY:}
         base-url: https://open.bigmodel.cn/api/paas/v4
         model-name: embedding-3
 
 iyque:
   userName: iyque
-  pwd: iyque.cn
+  pwd: ${SCRM_ADMIN_PASSWORD:}
   demo: false
   fileViewUrl: http://127.0.0.1:8085/file/fileView/ #文件统一访问前缀，后端api指向 FileController.readFile
   uploadDir: ./upload
@@ -45,7 +45,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:10179/scrm_ky?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: ${DB_PASSWORD:}
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
